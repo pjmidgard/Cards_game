@@ -706,7 +706,8 @@ x=d.shuffle()
 for i in x:
     print(i)
 a=int(input("\n \nEnter 1 to deal the cards \n"))
-
+if a>56:
+    print("sorry you have selected wrong card")
 
 
  
@@ -718,6 +719,8 @@ a=int(input("\n \nEnter 1 to deal the cards \n"))
 for i in x:
     print(i)
 b=int(input("\n\nSEcond player, Please enter any number !!!\n"))
+if b>56:
+    print("sorry you have selected wrong card")
 while(a==1 and b==1):
     print(d.deal())
     print()
@@ -928,7 +931,7 @@ class Ccy:
         # __sub__, __isub__ and __rsub__ can be defined analogue
 
 
-from Chapeter1game import Ccy
+from Casino import Ccy
 x = Ccy(10.00, "EUR")
 y = Ccy(10.00, "GBP")
 
@@ -942,7 +945,7 @@ BOB_player=random.randint(1, 56)
 
 print(BOB_player)
 
-if (a==b or a==BOB_player or b==BOB_player):
+if (a==b or a==BOB_player or b==BOB_player or a>56 or  b>56):
     print("wrong select card")
 
 
